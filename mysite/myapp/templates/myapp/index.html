@@ -1,11 +1,29 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Final-Website</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <h1>Final Website</h1>
+    <h2>LOGO</h2>
+    <h2>Navigation Bar</h2>
+    <ul>
+        <li><a href=/facts>Facts & Stats</a></li>
+    </ul>
+    <h2>Eco-Member List:</h2>
+    <ul class="users">
+        {% for user in users %}
+        <li>
+            <a href="{% url 'UserPage' user.id %}">
+                <img src="{% static user.image %}" alt="{{ user.name }}">
+                {{ user.name }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
