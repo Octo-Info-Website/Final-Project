@@ -8,12 +8,19 @@
     <title>UserPage</title>
 </head>
 <body>
-    <h1>{{user.name}}</h1>
-    <ul>
-        {% for answer in answers %}
-        <li>{{answer.answer_text}}</li>
-        {% endfor %}
-    </ul>
-   
+    <div id="userpage">
+        <div>
+        <h1 class="user-header">{{user.name}}</h1>
+        <img src="{% static user.image %}"/>
+        </div>
+        <div> 
+            {% for answer in answers %}
+            <div>
+                <h2>{{answer.question.question_text}}</h2>
+                <p>{{answer.answer_text}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>   
 </body>
 </html>

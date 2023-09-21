@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final-Website</title>
+    <title>Octo-Infopedia</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'myapp/img/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'myapp/img/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'myapp/img/favicon-16x16.png' %}">
     <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
 </head>
 <body>
-    <h1>Final Website</h1>
-    <h2>LOGO</h2>
-    <h2>Navigation Bar</h2>
-    <ul>
-        <li><a href=/facts>Facts & Stats</a></li>
-    </ul>
-    <h2>Eco-Member List:</h2>
+    <header>
+        <h1 class="Title">Octo-Infopedia</h1>
+        <a href=/facts>Facts & Stats</a>
+    </header>
+    <h2 class="member-header">Eco-Member List</h2>
     <ul class="users">
         {% for user in users %}
         <li>

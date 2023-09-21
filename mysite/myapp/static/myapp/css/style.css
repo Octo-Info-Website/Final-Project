@@ -1,7 +1,43 @@
 body {
     background-color: rgb(50, 7, 91);
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    color: #fff;
+}
+.Title{
+    display: flex;
+    text-align: left;
+}
+.member-header{
+    text-align: center;
+}
+
+
+.Facts-Title{
+    text-align: center;
+}
+#stats{
+    color:#fff;
 }
 .users{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    padding: 0;
+}
+.users a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#userpage {
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
