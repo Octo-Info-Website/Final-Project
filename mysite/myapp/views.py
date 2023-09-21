@@ -15,6 +15,6 @@ def facts(request):
 
 def UserPage(request, member_id):
     user = User.objects.get(pk = member_id)
-    answers = user.answer_set.all()
+    answers = Answer.objects.filter(user_id=member_id).select_related('question')
     context = {'user':user, 'answers':answers }
     return render(request, "myapp/UserPage.html", context)
